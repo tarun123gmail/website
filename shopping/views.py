@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from shopping.models import Product
+from .models import Product
 from math import ceil
 
 

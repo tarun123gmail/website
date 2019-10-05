@@ -32,12 +32,11 @@
  {% load static %}
 
 <a href="{% static 'shopping/mystatic.txt' %}"> click me </a>
+                <h1>Fashion website for Gardening tools</h1>
 
     <div class="container">
-
             <!--slide show starts here-->
 <!--            {% for all_product, range, nslides in all_prods %}-->
-                <h1>Fashion website for Gardening tools</h1>
     <div id="demo" class="carousel slide my-3" data-ride="carousel">
                 <ul class="carousel-indicators">
             <!--        #This will be out of loop as it will always be visible.-->
@@ -46,7 +45,7 @@
             <!--        #for loop starting from here for the arrows and not for the slide-->
 
                     {% for i in range %}
-                    <li data-target="#demo" data-slide-to="{{ i }}"></li>
+                    <li data-target="#demo" data-slide-to="{{i}}"></li>
                     {% endfor %}
 
                 </ul>
@@ -80,7 +79,7 @@
             {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
             </div> <div class="carousel-item">
                 {% endif %}
-        {% endfor %}
+                {% endfor %}
            </div>
         </div>
 
@@ -95,12 +94,10 @@
     <span class="carousel-control-next-icon"></span>
 </a>
 
-{% endfor %}
- </div>
-        {% endblock %}
-
-
-
+<!--{% endfor %}-->
+  {% endblock %}
+    </div>
+        <div/>
 <!--</div>-->
 
 
