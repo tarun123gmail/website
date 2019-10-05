@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dee1ee-dc99-43b5-bab4-a3b858fa39cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
