@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dee1ee-dc99-43b5-bab4-a3b858fa39cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shopping/maths.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.maths">
+  <component name="RunManager" selected="Python.views">
     <configuration name="maths" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="website" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.maths" />
         <item itemvalue="Python.views" />
+        <item itemvalue="Python.maths" />
       </list>
     </recent_temporary>
   </component>

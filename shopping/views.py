@@ -9,28 +9,30 @@ def index(request):
     return render(request, 'shopping/index.html')
 
 def home(request):
-    all_product = Product.objects.all()
-    print(all_product)
-    n = len(all_product)
-    nslides = n//4 + ceil((n/4)-(n//4))
-    context = {'no_of_slides': nslides, 'range': range(1, nslides), 'all_product': all_product}
-    # all_prods = [[all_product, range(1, len(all_product)),  nslides],
-    #              [all_product, range(1, len(all_product)),  nslides]]
+    # all_product = Product.objects.all()
+    # print(all_product)
+    # n = len(all_product)
+    # nslides = n//4 + ceil((n/4)-(n//4))
+    # # context = {'no_of_slides': nslides, 'range': range(1, nslides), 'all_product': all_product}
+    # all_prods = [[all_product, range(1, nslides),  nslides],
+    #              [all_product, range(1, nslides),  nslides]]
     # context = {'all_prods': all_prods}
-    return render(request, 'shopping/home.html', context)
+    # return render(request, 'shopping/home.html', context)
 
     # category wise products-------------------
-    # all_product = []
-    # catproducts = Product.objects.values('category', 'id')
-    # cats = {item['category'] for item in catproducts}
-    # for cat in cats:
-    #     prod = Product.objects.filter(category=cat)
-    #     n = len(all_product)
-    #     nslides = n//4 + ceil((n/4)-(n//4))
-    #     all_product.append([prod, range(1, nslides), nslides])
+    all_prods = []
+    catproducts = Product.objects.values('category', 'id')
+    cats = {item['category'] for item in catproducts}
+    for cat in cats:
+        prods = Product.objects.filter(category=cat)
+        n = len(prods)
+        nslides = n//4 + ceil((n/4)-(n//4))
+        all_prods.append([prods, range(1, nslides), nslides])
+    context = {'all_prods': all_prods}
+    return render(request, 'shopping/home.html', context)
     #
     # context = {'no_of_slides': nslides, 'range': range(1, nslides), 'all_product': all_product}
-    # return render(request, 'shopping/index.html', context)
+
 
 
 
