@@ -22,7 +22,7 @@ def home(request):
     # category wise products-------------------
     all_prods = []
     catproducts = Product.objects.values('category', 'id')
-    cats = {item['category'] for item in catproducts}
+    cats = {item ['category'] for item in catproducts}  #set comprehension
     for cat in cats:
         prods = Product.objects.filter(category=cat)
         n = len(prods)
