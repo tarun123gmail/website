@@ -22,7 +22,7 @@ def home(request):
     # category wise products-------------------
     all_prods = []
     catproducts = Product.objects.values('category', 'id')
-    cats = {item ['category'] for item in catproducts}  #set comprehension
+    cats = {item['category'] for item in catproducts}  #set comprehension
     for cat in cats:
         prods = Product.objects.filter(category=cat)
         n = len(prods)
@@ -40,6 +40,15 @@ def home(request):
 
 
     # def product.objets.all()
+
+def test(request):
+    return render(request, 'shopping/test.html')
+
+def product(request, myid):
+    #fetch the product using id
+    product = Product.objects.filter(id=myid)
+    print(product)
+    return render(request, 'shopping/product.html',{'product': product[0]})
 
 def about(request):
     return HttpResponse('<h1> we are in about page</h1>')

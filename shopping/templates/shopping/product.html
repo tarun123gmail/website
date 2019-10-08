@@ -1,0 +1,28 @@
+{% extends 'shopping/base.html' %}
+
+{% block body %}
+<div class="container my-4">
+    <div class="col-md-4">
+        <div class="row">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/714MP32ETDL._SX679_.jpg" alt="" width="300" height="200">
+        </div>
+    </div>
+        <div class="row">
+            <button class="btn btn-primary mx-3">Add to Cart</button>
+            <button class="btn btn-primary" >Buy Now</button>
+
+
+        </div>
+    <div class="col-md-8">
+        <h5>{{ product.product_name }}</h5>
+        <h5>{{ product.description }}</h5>
+        <b><p>{{ product.price }}</p></b>
+
+    </div>
+
+
+
+
+</div>
+
+{% endblock %}
