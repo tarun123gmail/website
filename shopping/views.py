@@ -51,9 +51,11 @@ def product(request, myid):
     return render(request, 'shopping/product.html',{'product': product[0]})
 
 def about(request):
-    return HttpResponse('<h1> we are in about page</h1>')
+    return render(request, 'shopping/about.html')
 def contact(request):
-    return HttpResponse('<h1> we are in contact page</h1>')
+    if request.method == 'POST':
+        print(request)
+    return render(request, 'shopping/contact.html')
 def search(request):
     return HttpResponse('<h1> we are in search page</h1>')
 def productView(request):
