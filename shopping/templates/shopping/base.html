@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ --> <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
     <style>
         {% block css %} {% endblock %}
     </style>
@@ -41,11 +41,11 @@
                     <span class="glyphicon glyphicon-music" area-hidden="true"></span>&nbsp; Tools
                 </a>
             </li>
-            <li class="">
+            <!-- <li class="">
                 <a href="{% url 'index-shoppin' %}">
                     <span class="glyphicon glyphicon-music" area-hidden="true"></span>&nbsp; cart(<span id="cart">0</span>)
                 </a>
-            </li>
+            </li> -->
         </ul>
 
         <form class="navbar-form navbar-left" role="search" method="GET" action="#">
@@ -74,8 +74,16 @@
 
         </div>
     </div>
-</nav>
 
+
+<div id="container-fluid" background-color="yellow" margin-top="10px;">
+        
+                <button type="button" class="btn btn-secondary navbar-right mx-4" id="popovercart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Cart (<span id="cart">0</span>) 
+                <button type="button" class="btn btn-success">Check Out</button>
+                <button type="button" class="btn btn-success">Delete</button>
+                </button>
+               </div>
+</nav>
  {% block body %}
      {% load static %}
  {% endblock %}

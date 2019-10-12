@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product
+from .models import Product, Contact
 from math import ceil
 
 
@@ -33,12 +33,6 @@ def home(request):
     #
     # context = {'no_of_slides': nslides, 'range': range(1, nslides), 'all_product': all_product}
 
-
-
-
-
-
-
     # def product.objets.all()
 
 def test(request):
@@ -52,10 +46,19 @@ def product(request, myid):
 
 def about(request):
     return render(request, 'shopping/about.html')
+
 def contact(request):
     if request.method == 'POST':
-        print(request)
+        fname = request.POST.get('fname', '')
+        lname = request.POST.get('lname', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('phone', '')
+        desc = request.POST.get('desc', '')
+        # print(fname, lname, email, phone, desc)
+        contact = Contact(First_Name=fname, Last_Name=lname, Email=email, Phone=phone, Description=desc)
+        contact.save()
     return render(request, 'shopping/contact.html')
+
 def search(request):
     return HttpResponse('<h1> we are in search page</h1>')
 def productView(request):

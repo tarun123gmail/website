@@ -15,5 +15,18 @@ class Product(models.Model):
 
 
 
+class Contact(models.Model):
+    msg_id = models.AutoField(primary_key=True)
+    First_Name = models.CharField(max_length=50)
+    Last_Name = models.CharField(max_length=50, default='')
+    Email = models.CharField(max_length=70, default='')
+    Phone = models.IntegerField(default=0)
+    Description = models.CharField(max_length=500)
+    # sub_date = models.DateField()  hwo to save it in database
+    # image = models.ImageField(upload_to='shopping/images', default='')
+
+    def __str__(self):
+        return self.First_Name
+
 
 # Create your models here.

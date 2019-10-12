@@ -2,26 +2,26 @@
 {% block body %}
 
 <div class="container">
-<form action="/shopping/contact" type="post">
+<form action="/shopping/contact/" method="post">{% csrf_token %}
   <div class="form-group">
     <label for="Email">Email address</label>
-    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
   </div>
   <div class="form-group">
     <label for="fname">First Name</label>
-    <input type="text" class="form-control" id="fname" placeholder="First Name">
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
   </div>
   <div class="form-group">
     <label for="lname">Last Name</label>
-    <input type="text" class="form-control" id="lname" placeholder="Last Name">
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
   </div>
   <div class="form-group">
     <label for="phone">Phone Number</label>
-    <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
   </div>
   <div class="form-group">
     <label for="desc">Detail query please</label>
-    <textarea class="form-control" id="desc" rows="3" placeholder="How can we help you.."></textarea>
+    <textarea class="form-control" id="desc" rows="3" name="desc" placeholder="How can we help you.."></textarea>
   </div>
     <button type="submit" class="btn btn-success">Submit</button>
 </form>
