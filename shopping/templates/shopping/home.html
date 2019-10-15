@@ -1,4 +1,4 @@
-
+  
 <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
@@ -41,6 +41,8 @@
 
 {% block body %}
   {% load static %}
+'<a href="/shopping/checkout/"> <button type="button" id="checkout" class="btn btn-success">Check Out</button></a> <button class="btn btn-success" onclick="clearCart()" id="clearCart">Clear Cart</button>'
+
  <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <a href="{% static 'shopping/mystatic.txt' %}"> click me </a>
@@ -74,7 +76,7 @@ slide show starts here-->
                     <div class="card" style="width: 18rem;">
                       <img src="{% static 'shopping/tools.jpg' %}"  class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title" id="namepr{{i.id}}"> {{ i.product_name }}</h5>
+                        <h5 class="card-title" id="namepr{{i.id}}">{{ i.product_name }}</h5>
                         <p class="card-text">{{ i.description }}</p>
                         <span id="divpr{{ i.id }}" class="divpr">
                             <button id="pr{{ i.id }}" class="btn btn-primary cart my-3">Add to cart</button></span>
@@ -100,6 +102,7 @@ slide show starts here-->
 <a class="carousel-control-next"  href="#demo{{forloop.counter}}" data-slide="next">
     <span class="carousel-control-next-icon"></span>
 </a>
+
 {% endfor %}
     </div>
 {% endblock %}
@@ -109,7 +112,7 @@ slide show starts here-->
 
 
 <script>
-
+ 
 
     // find out the cart items form loacl storagr...
 
@@ -149,7 +152,7 @@ updatePopover(cart);
 function updatePopover(cart){
 console.log('we are inside updatepopver')
 var pop = ''
-pop = pop + '<h5> Checkout Items in your Cart </h5>'
+pop = pop + '<h5> Checkout Items in your Cart </h5> <div>'
 var i = 1
 for (var items in cart){
     pop = pop + "<b>" + i + "</b>" 
@@ -157,12 +160,24 @@ for (var items in cart){
     i++;
     console.log(document.getElementById('name' + items))
 }
+// pop = pop + '<div> <a href="/shopping/checkout/"> <button type="button" id="checkout" class="btn btn-success">Check Out</button></a> <button type="button" class="btn btn-success" onclick="clearCart()" id="clearCart">Clear Cart</button> </button>'
+ 
 
-$('#popovercart').popover('show');
 document.getElementById('popovercart').setAttribute('data-content', pop);
+$('#popovercart').popover('show');
+}
 
+function clearCart()
 
-
+function clearCart(){
+cart = JSON.parse(localStorage.getItem('cart'));
+for (var items in cart){
+document.getElementById('div' + items).innerHTML = '<button id=" ' + items +' " class="btn btn-primary cart">Add to Cart </button>'
+}
+localStorage.clear();
+cart = {};
+console.log(cart);
+updateCart(cart);
 }
 
 function updateCart(cart){
@@ -178,7 +193,6 @@ function updateCart(cart){
     //document.getElementById('cart').innerHTML = Object.keys(cart).length; earlier it was this... later at line 177
     console.log(cart);
     updatePopover(cart);
-
 }
 
 // if plus or minus button is clicked then change the cart as well as the display.
