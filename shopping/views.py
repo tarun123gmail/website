@@ -65,8 +65,9 @@ def productView(request):
     return HttpResponse('<h1> we are in productView page</h1>')
 def tracking(request):
     return HttpResponse('<h1> we are in tracking page</h1>')
+
 def checkout(request):
-    return HttpResponse('<h1> we are in checkout page</h1>')
+    return render(request, 'shopping/checkout.html')
 
 
 # Create your views here.
