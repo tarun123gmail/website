@@ -131,6 +131,7 @@ updateCart(cart);
 // if the add to cart button is clicked add/increment the item
 
     $('.cart').click(function() {
+    // $('.')
     // console.log('clicked');
     var idstr = this.id.toString();
     console.log(idstr);
@@ -167,7 +168,9 @@ document.getElementById('popovercart').setAttribute('data-content', pop);
 $('#popovercart').popover('show');
 }
 
-function clearCart()
+// function clearCart(){
+
+// }
 
 function clearCart(){
 cart = JSON.parse(localStorage.getItem('cart'));
