@@ -7,20 +7,9 @@
 
 <h2>This is the Checkout Page</h2>
 
-<div></div>
+<div>
 <ul class="list-group" id="items">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Cras justo odio
-    <span class="badge badge-primary badge-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Dapibus ac facilisis in
-    <span class="badge badge-primary badge-pill">2</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Morbi leo risus
-    <span class="badge badge-primary badge-pill">1</span>
-  </li>
+ 
 </ul>
 </div>
 </div>
@@ -62,20 +51,11 @@
       <label for="inputPhone">Phone</label>
       <input type="tel" class="form-control" id="inputPhone">
     </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
 
 </div>
-
+</div>
 
 {% endblock %}
 
@@ -88,21 +68,32 @@ var cart = {};
 }
 else{
 cart = JSON.parse(localStorage.getItem('cart'));
-console.log(cart);
 }	
+console.log(cart);
+var sum = 0;
+if ($.isEmptyObject(cart)){
+  mystr = `<p>Your Cart is Empth</p>`
 
-for (item in cart){
-	Let name = cart[item][1];
-	Let qty = cart[item][0];
+          $('#items').append(mystr);
+
+}else{
+
+for(item in cart){
+	let name = cart[item][1];
+	let qty = cart[item][0];
+  sum = sum + qty;
 	mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
-    ${name}
-    <span class="badge badge-primary badge-pill">${qty}</span>
-  </li>`
+           ${name}
+            <span class="badge badge-primary badge-pill">${qty}</span>
+          </li>`
 
 
-$('#item').append(mystr);
+$('#items').append(mystr);
 
 }
+}
+document.getElementById('cart').innerHTML = sum;
+
 </script>
 
 {% endblock %}

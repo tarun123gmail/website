@@ -193,7 +193,7 @@ function updateCart(cart){
  
 	}
     localStorage.setItem('cart', JSON.stringify(cart));
-    document.getElementById('cart').innerHTML = sum
+    document.getElementById('cart').innerHTML = sum;
     //document.getElementById('cart').innerHTML = Object.keys(cart).length; earlier it was this... later at line 177
     console.log(cart);
     updatePopover(cart);

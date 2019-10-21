@@ -29,4 +29,17 @@ class Contact(models.Model):
         return self.First_Name
 
 
+class Order(models.Model):
+    Order_id = models.AutoField(primary_key=True)
+    Item_json = models.CharField(max_length=5000)
+    Name = models.CharField(max_length=100)
+    Email = models.CharField(max_length=100)
+    Address1 = models.CharField(max_length=100)
+    Address2 = models.CharField(max_length=100)
+    City = models.CharField(max_length=100)
+    State = models.CharField(max_length=100)
+    Phone = models.CharField(max_length=100)
+
+
+
 # Create your models here.

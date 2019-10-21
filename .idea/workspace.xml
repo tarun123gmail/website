@@ -6,9 +6,8 @@
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
