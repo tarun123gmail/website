@@ -1,0 +1,30 @@
+{% extends base.html %}
+
+{% block body  %}
+
+<div class="container">
+  <h3>Inverted Navbar</h3>
+  <p>An inverted navbar is black instead of gray.</p>
+
+    <form action="/practice/details/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+  </div>
+      <div class="col">
+    <label for="name">Full Name</label>
+    <input type="name" class="form-control" id="name" placeholder="name@example.com" name="name">
+  </div>
+  <div class="col">
+    <label for="age">Age</label>
+    <input type="age" class="form-control" id="age" placeholder="name@example.com" name="age">
+  </div>
+  <div class="form-group">
+    <label for="note">Special Note</label>
+    <textarea class="form-control" id="note" rows="3" name="note"></textarea>
+  </div>
+        <button type="submit" class="btn btn-primary">Primary</button>
+</form>
+</div>
+
+{% endblock %}

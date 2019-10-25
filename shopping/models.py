@@ -14,7 +14,6 @@ class Product(models.Model):
         return self.product_name
 
 
-
 class Contact(models.Model):
     msg_id = models.AutoField(primary_key=True)
     First_Name = models.CharField(max_length=50)
@@ -40,6 +39,18 @@ class Order(models.Model):
     State = models.CharField(max_length=100)
     Phone = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.Name
+
+
+class OrderUpdate(models.Model):
+    update_id = models.AutoField(primary_key=True)
+    order_id = models.IntegerField(default="")
+    timestamp = models.DateField(auto_now_add=True)
+    update_desc = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.update_desc[0:9] + '...'
 
 
 # Create your models here.

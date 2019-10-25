@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88dee1ee-dc99-43b5-bab4-a3b858fa39cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/practice/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/human_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/practice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping/migrations/0006_orderupdate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping/templates/shopping/learningPY.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/templates/shopping/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/templates/shopping/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +71,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.views">
+  <component name="RunManager" selected="Python.learningPY">
+    <configuration name="learningPY" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="website" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shopping/templates/shopping" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shopping/templates/shopping/learningPY.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="maths" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="website" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.learningPY" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.maths" />
       </list>
@@ -131,5 +168,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/website/wsgi.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

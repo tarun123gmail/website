@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'practice.apps.PracticeConfig',
     'shopping.apps.ShoppingConfig',
     'ecom.apps.EcomConfig',
     'django.contrib.admin',

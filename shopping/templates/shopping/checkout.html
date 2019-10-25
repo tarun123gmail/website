@@ -9,51 +9,55 @@
 
 <div>
 <ul class="list-group" id="items">
- 
 </ul>
 </div>
 </div>
 
 <div class="col my-4">
 	<h2>Enter your details</h2>
-<form>
+<form method="Post" action="/shopping/home/"> {% csrf_token %}
+  <input type="hidden" name="itemjson" id="itemjson">
   <div class="form-row">
   	<div class="form-group col-md-6">
-      <label for="inputPassword4">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Name">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="Email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="Address1">Address</label>
+    <input type="text" class="form-control" id="address1" name="address1" placeholder="1234 Main St">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address Line Two</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="Address2">Address Line 2</label>
+    <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="City">City</label>
+      <input type="text" class="form-control" id="city" name="city">
     </div>
+
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
+      <label for="State">State</label>
+      <input type="text" name="state" id="state">
     </div>
     <div class="form-group col-md-2">
-      <label for="inputPhone">Phone</label>
-      <input type="tel" class="form-control" id="inputPhone">
+      <label for="Phone">Phone</label>
+      <input type="tel" class="form-control" id="Phone" name="phone">
     </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
 
+    <button type="submit" class="btn btn-primary" id="submit">Sign in</button>
+    </div>
+    <div class="alert alert-success collapse" id="myalert" role="alert">
+  This is a success alert—check it out!
+      </div>
+
+</form>
+</button>
 </div>
 </div>
 
@@ -93,6 +97,17 @@ $('#items').append(mystr);
 }
 }
 document.getElementById('cart').innerHTML = sum;
+$('#itemjson').val(JSON.stringify(cart));
+alert('thank you for your shopping. your order id is {{id}}')
+localStorage.clear();
+// document.location = '/shopping/home/';
+
+$(document).ready(function () {
+  $('#submit').click(function(){
+    $('#myalert').show();
+
+  });
+});
 
 </script>
 
